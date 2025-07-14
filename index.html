@@ -6,8 +6,8 @@
   <title>Apex Smartphones</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+
   <header>
     <div class="logo-name">
       <img src="images/logo.png" alt="Apex Smartphones Logo" class="logo" />
@@ -29,56 +29,8 @@
 
   <section class="products">
     <h3>Popular Products</h3>
-    <div class="product-grid">
-      <!-- Product 1 -->
-      <div class="product-card">
-        <img src="images/camon40.jpg" alt="Tecno Camon 40 4G" />
-        <p class="category">Category: 4G / Flagship</p>
-        <h4>Tecno Camon 40 4G</h4>
-        <p class="price">Ksh 24,499 - 27,599</p>
-        <ul class="specs">
-          <li><strong>RAM:</strong> 8GB</li>
-          <li><strong>Storage:</strong> 256GB</li>
-          <li><strong>Battery:</strong> 5100mAh, 80W fast charging</li>
-          <li><strong>Main Camera:</strong> 50MP + 8MP + 2MP</li>
-          <li><strong>Front Camera:</strong> 32MP</li>
-          <li><strong>Display:</strong> 6.78" AMOLED, 120Hz</li>
-          <li><strong>Resolution:</strong> 1080 x 2400 px</li>
-          <li><strong>Processor:</strong> MediaTek Dimensity 7300 (6nm)</li>
-          <li><strong>OS:</strong> Android 15, HIOS 15</li>
-          <li><strong>Connectivity:</strong> 4G LTE, Wi-Fi 6, Bluetooth 5.4</li>
-          <li><strong>USB:</strong> Type-C</li>
-          <li><strong>Colours:</strong> Galaxy Black, Glacier White, Emerald Lake Green</li>
-        </ul>
-        <a href="https://wa.me/+254741888466" class="whatsapp-button" target="_blank">
-          Order via WhatsApp
-        </a>
-      </div>
-
-      <!-- Product 2 -->
-      <div class="product-card">
-        <img src="images/note50.jpg" alt="Infinix Note 50 5G" />
-        <p class="category">Category: 5G / Flagship</p>
-        <h4>Infinix Note 50 5G</h4>
-        <p class="price">Ksh 31,999</p>
-        <ul class="specs">
-          <li><strong>RAM:</strong> 8GB</li>
-          <li><strong>Storage:</strong> 128GB / 256GB</li>
-          <li><strong>Battery:</strong> 5500mAh Li-Polymer, 45W fast charge</li>
-          <li><strong>Main Camera:</strong> 64MP + 2MP</li>
-          <li><strong>Front Camera:</strong> 13MP, 4K@30fps</li>
-          <li><strong>Display:</strong> 6.78" AMOLED, 144Hz</li>
-          <li><strong>Resolution:</strong> 1080 × 2436 px (393ppi)</li>
-          <li><strong>Glass:</strong> Gorilla Glass 5</li>
-          <li><strong>Processor:</strong> MediaTek Dimensity 7300 Ultimate (4nm), Mali-G615 MC2</li>
-          <li><strong>OS:</strong> Android 15, XOS 15</li>
-          <li><strong>Connectivity:</strong> 5G, Dual SIM, Wi-Fi 6, Bluetooth 5.4, GPS, Infrared, USB-C OTG</li>
-          <li><strong>Colours:</strong> 18 options, 1300 nits brightness</li>
-        </ul>
-        <a href="https://wa.me/+254741888466" class="whatsapp-button" target="_blank">
-          Order via WhatsApp
-        </a>
-      </div>
+    <div class="product-grid" id="productContainer">
+      <!-- Products will load here -->
     </div>
   </section>
 
@@ -95,11 +47,9 @@
     </p>
   </footer>
 
-  <a href="https://wa.me/+254741888466" class="float-whatsapp" target="_blank" title="Chat on WhatsApp">
-    💬
-  </a>
+  <a href="https://wa.me/+254741888466" class="float-whatsapp" target="_blank" title="Chat on WhatsApp">💬</a>
 
-  <!-- Search Filter Script -->
+  <!-- Scripts -->
   <script>
     function filterPhones() {
       let input = document.getElementById("searchBar").value.toLowerCase();
@@ -110,6 +60,28 @@
         card.style.display = text.includes(input) ? "block" : "none";
       }
     }
+
+    // Load products from JSON
+    fetch('products.json')
+      .then(response => response.json())
+      .then(products => {
+        const container = document.getElementById('productContainer');
+        products.forEach(product => {
+          const card = document.createElement('div');
+          card.className = 'product-card';
+          card.innerHTML = `
+            <img src="${product.image}" alt="${product.name}" />
+            <h4><p class="category">Category: ${product.category}</p>${product.name}</h4>
+            <p class="price">${product.price}</p>
+            <ul class="specs">
+              ${product.specs.map(spec => `<li>${spec}</li>`).join('')}
+            </ul>
+            <a href="https://wa.me/+254741888466" class="whatsapp-button" target="_blank">Order via WhatsApp</a>
+          `;
+          container.appendChild(card);
+        });
+      });
   </script>
+
 </body>
 </html>
