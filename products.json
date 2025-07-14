@@ -1,42 +1,44 @@
 [
   {
-    "name": "Tecno Camon 40 4G",
-    "price": "Ksh 24,499 - 27,599",
-    "image": "images/camon40.jpg",
-    "category": "4G / Flagship",
-    "specs": [
-      "RAM: 8GB",
-      "Storage: 256GB",
-      "Battery: 5100mAh, 80W Fast Charging",
-      "Main Camera: 50MP + 8MP + 2MP",
-      "Front Camera: 32MP",
-      "Display: 6.78\" AMOLED, 120Hz",
-      "Resolution: 1080 x 2400 px",
-      "Processor: MediaTek Dimensity 7300 (6nm)",
-      "OS: Android 15, HIOS 15",
-      "Connectivity: 4G LTE, Wi-Fi 6, Bluetooth 5.4",
-      "USB: Type-C",
-      "Colours: Galaxy Black, Glacier White, Emerald Lake Green"
-    ]
-  },
-  {
     "name": "Infinix Note 50 5G",
-    "price": "Ksh 31,999",
-    "image": "images/note50.jpg",
+    "price": "31,999",
     "category": "5G / Flagship",
+    "image": "images/note50.jpg",
+    "whatsapp": "+254741888466",
     "specs": [
-      "RAM: 8GB",
-      "Storage: 128GB / 256GB",
-      "Battery: 5500mAh Li-Polymer, 45W Fast Charging",
-      "Main Camera: 64MP + 2MP",
-      "Front Camera: 13MP, 4K@30fps",
-      "Display: 6.78\" AMOLED, 144Hz",
-      "Resolution: 1080 × 2436 px",
-      "Glass: Gorilla Glass 5",
-      "Processor: Dimensity 7300 Ultimate (4nm)",
-      "OS: Android 15, XOS 15",
-      "Connectivity: 5G, Dual SIM, Wi-Fi 6, Bluetooth 5.4, GPS, USB-C OTG",
-      "Colours: 18 Options, 1300 nits Peak"
+      {"label": "RAM", "value": "8GB"},
+      {"label": "Storage", "value": "128GB / 256GB"},
+      {"label": "Battery", "value": "5500mAh Li-Polymer, 45W Fast Charging"},
+      {"label": "Main Camera", "value": "64MP + 2MP"},
+      {"label": "Front Camera", "value": "13MP, 4K@30fps"},
+      {"label": "Display", "value": "6.78\" AMOLED, 144Hz"},
+      {"label": "Resolution", "value": "1080 × 2436 px (393ppi)"},
+      {"label": "Glass", "value": "Gorilla Glass 5"},
+      {"label": "Processor", "value": "Dimensity 7300 Ultimate (4nm), Octa-core"},
+      {"label": "OS", "value": "Android 15, XOS 15"},
+      {"label": "Connectivity", "value": "5G, WiFi 6, USB-C OTG"},
+      {"label": "Colours", "value": "18 colours, 1300 nits brightness"}
     ]
   }
 ]
+,
+{
+  "name": "Tecno Camon 40 4G",
+  "image": "images/camon40.jpg",
+  "price": "Ksh 24,499 - 27,599",
+  "category": "4G / Flagship",
+  "specs": {
+    "RAM": "8GB",
+    "Storage": "256GB",
+    "Battery": "5100mAh, 80W fast charging",
+    "Main Camera": "50MP + 8MP + 2MP",
+    "Front Camera": "32MP",
+    "Display": "6.78\" AMOLED, 120Hz",
+    "Resolution": "1080 × 2400 px",
+    "Processor": "MediaTek Dimensity 7300 (6nm)",
+    "OS": "Android 15, HIOS 15",
+    "Connectivity": "4G LTE, Wi-Fi 6, Bluetooth 5.4",
+    "USB": "Type-C",
+    "Colours": "Galaxy Black, Glacier White, Emerald Lake Green"
+  }
+}
