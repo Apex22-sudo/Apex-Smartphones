@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<header>
-  <div class="logo-name">
-    <img src="images/logo.png" alt="Apex Smartphones Logo" class="logo" />
-    <h1>Apex Smartphones</h1>
-  </div>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Products</a>
-    <a href="#">Contact</a>
-  </nav>
-</header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apex Smartphones</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
+<body>
+  <header>
+    <div class="logo-name">
+      <img src="images/logo.png" alt="Apex Smartphones Logo" class="logo" />
+      <h1>Apex Smartphones</h1>
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">Contact</a>
+    </nav>
   </header>
 
   <section class="hero">
@@ -19,61 +25,91 @@
     <p>Quality you can trust. Prices you’ll love.</p>
   </section>
 
+  <input type="text" id="searchBar" placeholder="Search phones..." onkeyup="filterPhones()" />
+
   <section class="products">
     <h3>Popular Products</h3>
     <div class="product-grid">
-        <div class="product-card">
-  <img src="images/camon40.jpg" alt="Tecno Camon 40 4G" />
-  <h4>Tecno Camon 40 4G</h4>
-  <p class="price">Ksh 24,499-27,599</p>
-  <ul class="specs">
-    <li><strong>RAM:</strong> 8GB</li>
-    <li><strong>Storage:</strong> 256GB</li>
-    <li><strong>Battery:</strong> 5100mAh, 80W fast charging</li>
-    <li><strong>Main Camera:</strong> 50MP + 8MP + 2MP</li>
-    <li><strong>Front Camera:</strong> 32MP</li>
-    <li><strong>Display:</strong> 6.78" AMOLED, 120Hz</li>
-    <li><strong>Resolution:</strong> 1080 x 2400 px</li>
-    <li><strong>Processor:</strong> MediaTek Dimensity 7300 (6nm)</li>
-    <li><strong>OS:</strong> Android 15, HIOS 15</li>
-    <li><strong>Connectivity:</strong> 4G LTE, Wi-Fi 6, Bluetooth 5.4</li>
-    <li><strong>USB:</strong> Type-C</li>
-    <li><strong>Colours:</strong> Galaxy Black, Glacier White, Emerald Lake Green</li>
-<a href="https://wa.me/+254741888466" class="whatsapp-button" target="_blank">
-  Order via WhatsApp
-  </a>
-  <div class="product-card">
-  <img src="images/note50.jpg" alt="Infinix Note 50 5G" />
-  <h4>Infinix Note 50 5G</h4>
-  <p class="price">Ksh 31,999</p>
-  <ul class="specs">
-    <li><strong>RAM:</strong> 8GB</li>
-    <li><strong>Storage:</strong> 128GB / 256GB</li>
-    <li><strong>Battery:</strong> 5500mAh Li-Polymer, 45W wired fast charging (0–100% in 60 mins)</li>
-    <li><strong>Main Camera:</strong> 64MP + 2MP</li>
-    <li><strong>Front Camera:</strong> 13MP, 4K@30fps</li>
-    <li><strong>Display:</strong> 6.78" AMOLED, 144Hz</li>
-    <li><strong>Resolution:</strong> 1080 × 2436 px (393ppi)</li>
-    <li><strong>Glass:</strong> Gorilla Glass 5</li>
-    <li><strong>Processor:</strong> MediaTek Dimensity 7300 Ultimate (4nm), Mali-G615 MC2, Octa-core</li>
-    <li><strong>OS:</strong> Android 15, XOS 15</li>
-    <li><strong>Connectivity:</strong> 5G, Dual SIM, Wi-Fi 6, Bluetooth 5.4, GPS, Infrared, USB-C OTG</li>
-    <li><strong>Colours:</strong> 18 colour options, 1300 nits peak brightness</li>
-  </ul>
+      <!-- Product 1 -->
+      <div class="product-card">
+        <img src="images/camon40.jpg" alt="Tecno Camon 40 4G" />
+        <p class="category">Category: 4G / Flagship</p>
+        <h4>Tecno Camon 40 4G</h4>
+        <p class="price">Ksh 24,499 - 27,599</p>
+        <ul class="specs">
+          <li><strong>RAM:</strong> 8GB</li>
+          <li><strong>Storage:</strong> 256GB</li>
+          <li><strong>Battery:</strong> 5100mAh, 80W fast charging</li>
+          <li><strong>Main Camera:</strong> 50MP + 8MP + 2MP</li>
+          <li><strong>Front Camera:</strong> 32MP</li>
+          <li><strong>Display:</strong> 6.78" AMOLED, 120Hz</li>
+          <li><strong>Resolution:</strong> 1080 x 2400 px</li>
+          <li><strong>Processor:</strong> MediaTek Dimensity 7300 (6nm)</li>
+          <li><strong>OS:</strong> Android 15, HIOS 15</li>
+          <li><strong>Connectivity:</strong> 4G LTE, Wi-Fi 6, Bluetooth 5.4</li>
+          <li><strong>USB:</strong> Type-C</li>
+          <li><strong>Colours:</strong> Galaxy Black, Glacier White, Emerald Lake Green</li>
+        </ul>
+        <a href="https://wa.me/+254741888466" class="whatsapp-button" target="_blank">
+          Order via WhatsApp
+        </a>
+      </div>
 
-  <a href="https://wa.me/+254741888466" class="whatsapp-button" target="_blank">
-    Order via WhatsApp
-  </a>
-</div>
+      <!-- Product 2 -->
+      <div class="product-card">
+        <img src="images/note50.jpg" alt="Infinix Note 50 5G" />
+        <p class="category">Category: 5G / Flagship</p>
+        <h4>Infinix Note 50 5G</h4>
+        <p class="price">Ksh 31,999</p>
+        <ul class="specs">
+          <li><strong>RAM:</strong> 8GB</li>
+          <li><strong>Storage:</strong> 128GB / 256GB</li>
+          <li><strong>Battery:</strong> 5500mAh Li-Polymer, 45W fast charge</li>
+          <li><strong>Main Camera:</strong> 64MP + 2MP</li>
+          <li><strong>Front Camera:</strong> 13MP, 4K@30fps</li>
+          <li><strong>Display:</strong> 6.78" AMOLED, 144Hz</li>
+          <li><strong>Resolution:</strong> 1080 × 2436 px (393ppi)</li>
+          <li><strong>Glass:</strong> Gorilla Glass 5</li>
+          <li><strong>Processor:</strong> MediaTek Dimensity 7300 Ultimate (4nm), Mali-G615 MC2</li>
+          <li><strong>OS:</strong> Android 15, XOS 15</li>
+          <li><strong>Connectivity:</strong> 5G, Dual SIM, Wi-Fi 6, Bluetooth 5.4, GPS, Infrared, USB-C OTG</li>
+          <li><strong>Colours:</strong> 18 options, 1300 nits brightness</li>
+        </ul>
+        <a href="https://wa.me/+254741888466" class="whatsapp-button" target="_blank">
+          Order via WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
 
-</a>
-  
-</ul>
-</div>
+  <section id="about">
+    <h2>About Apex Smartphones</h2>
+    <p>We are a trusted mobile phone shop offering the latest smartphones at unbeatable prices. Delivery available nationwide. Call or WhatsApp us today!</p>
   </section>
 
   <footer>
-    <p>© 2025 Mobile Hub. All rights reserved.</p>
+    <p>© 2025 Apex Smartphones. All rights reserved.</p>
+    <p>Follow us on 
+      <a href="https://instagram.com/yourpage" target="_blank">Instagram</a> |
+      <a href="mailto:yourmail@example.com">Email</a>
+    </p>
   </footer>
+
+  <a href="https://wa.me/+254741888466" class="float-whatsapp" target="_blank" title="Chat on WhatsApp">
+    💬
+  </a>
+
+  <!-- Search Filter Script -->
+  <script>
+    function filterPhones() {
+      let input = document.getElementById("searchBar").value.toLowerCase();
+      let cards = document.getElementsByClassName("product-card");
+
+      for (let card of cards) {
+        let text = card.innerText.toLowerCase();
+        card.style.display = text.includes(input) ? "block" : "none";
+      }
+    }
+  </script>
 </body>
 </html>
